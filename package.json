@@ -1,5 +1,5 @@
 {
-  "name": "@chandrasekhar-tiwari/eg-component-lib",
+  "name": "@chandrasekhar_tiwari/eg-component-lib",
   "version": "1.0.1",
   "type": "module",
   "main": "./dist/my-lib.umd.js",
