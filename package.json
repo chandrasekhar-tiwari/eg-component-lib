@@ -1,6 +1,6 @@
 {
   "name": "@chandrasekhar_tiwari/eg-component-lib",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "main": "./dist/my-lib.umd.js",
   "module": "./dist/my-lib.es.js",
