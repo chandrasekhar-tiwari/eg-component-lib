@@ -37,18 +37,29 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/index.js'), // Your entry point
+      entry: resolve(__dirname, 'src/index.js'),
       name: 'MyComponentLib',
-      fileName: (format) => `my-lib.${format}.js`,
     },
     rollupOptions: {
-      external: ['react', 'react-dom'], // Don't bundle React
-      output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
+      external: ['react', 'react-dom', 'prop-types'],
+      output: [
+        {
+          format: 'es',
+          entryFileNames: 'my-lib.es.js',
+          dir: 'dist',
         },
-      },
+        {
+          format: 'umd',
+          entryFileNames: 'my-lib.umd.js',
+          dir: 'dist',
+          name: 'MyComponentLib',
+          globals: {
+            react: 'React',
+            'react-dom': 'ReactDOM',
+            'prop-types': 'PropTypes',
+          },
+        }
+      ],
     }
   }
 });
